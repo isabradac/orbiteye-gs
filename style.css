@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: Arial, sans-serif;
+    background:#0b0f1a;
+    color:white;
+}
+header
+{
+    background: #111827;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: sticky;
+    top: 0;
+}
+nav a 
+{
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+nav a :hover
+{
+    color: #38bdf8;
+}
+.hero
+{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.hero h2
+{
+    font-size: 20px;
+    max-width: 700px;
+}
+.hero p
+{
+    font-size: 20px;
+    max-width: 700px;
+}
+section
+{
+    padding: 80px 50px;
+}
+section h2
+{
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+ul
+{
+    margin-left: 20px;
+}
+.slideshow
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.slide
+{
+    width: 80%;
+    border-radius: 10px;
+    display: none;
+}
+.slide.active
+{
+    display: block;
+}
+form
+{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 15px;
+}
+input, button
+{
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+}
+button
+{
+    background: #38bdf8;
+    color: white;
+    cursor: pointer;
+}
+button :hover
+{
+    background: #0ea5e9;
+}
