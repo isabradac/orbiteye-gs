@@ -4,74 +4,224 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OrbitEye</title>
-    <link rel="styleheet" href="style.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>OrbitEye</h1>
-
+        <div class="logo">
+            OrbitEye
+        </div>
         <nav>
-            <a href="#problema">Problema</a>
+            <a href="#sobre">Sobre</a>
             <a href="#tecnologia">Tecnologia</a>
-            <a href="#objetivos">Objetivos</a>
-            <a href="#beneficios">Beneficios</a>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#galeria">Galeria</a>
             <a href="#quiz">Quiz</a>
             <a href="#contato">Contato</a>
         </nav>
     </header>
-
     <section class="hero">
-        <h2>Tecnologia Espacial no combate as queimadas</h2>
-        <p>
-            Uma plataforma inteligente que foi inspirada em satélites para o monitoramento ambiental.
-        </p>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="tag">
+                Monitoramento Inteligente • Tecnologia Espacial
+            </span>
+            <h1>
+                Tecnologia espacial aplicada na proteção ambiental.
+            </h1>
+            <p>
+                O OrbitEye é uma plataforma inteligente inspirada nas tecnologias de monitoramento orbital, e na análise de dados ambientais.
+                O projeto vai atrás de auxiliar no combate as queimadas, enchentes e mudanças climáticas através de informações em tempo real.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn-primary">
+                    Explorar o projeto
+                </button>
+                <button class="btn-secondary">
+                    Saiba mais 
+                </button>
+            </div>
+        </div>
     </section>
-    <section id="Problema">
-        <h2>Problema</h2>
-        <p>
-            As queimadas e enchentes, causam impactos ambientais e sociais em diversas regiões
-        </p>
+    <section id="Sobre" class="Sobre">
+        <div class="sobre-texto">
+            <span class="mini-title">
+                SOBRE O PROJETO
+            </span>
+            <h2>
+                Solução tecnológica inspirada nos satélites ambientais.
+            </h2>
+            <p>
+                O aumento das queimadas, enchentes e eventos climáticos extremos, represneta um dos maiores desafios ambientais da atualidade. Muitas regiões ainda apresentam muitas dificuldades em monitorar as áreas de riscos de forma eficiente, atrasando completamente as respostas emergenciais e aumentando impactos ambientais e sociais.
+            </p>
+            <p>
+                O OrbitEye surge como uma proposta tecnológica capaz de integrar monitoramento inteligente, a vizualização de dados e acompanhamento ambiental em tempo real, utilizando conceitos inspirados em tecnologias espaciais modernas.
+            </p>
+        </div>
+        <div class="sobre-imagem">
+            <img src="img/espaço.avif">
+        </div>
     </section>
-    <section id="Tecnologia">
-        <h2>Tecnologia</h2>
-        <p>
-            O OrbitEye, utiliza o monitoramentoinspiado em satélites e os sensores inteligentes.
-        </p>
+    <section id="Tecnologia" class="tecnologia">
+        <span class="mini-title">
+            TECNOLOGIA
+        </span>
+        <h2>
+            Recursos tecnológicos da plataforma.
+        </h2>
+        <div class="cards">
+            <div class="card">
+                <h3>
+                    Monitoramento inteligente.
+                </h3>
+                    <p>
+                        A plataforma utiliza conceitos inspirados em observação orbital para análise ambiental e acompanhamento de áreas de risco.
+                    </p>
+            </div>
+            <div class="card">
+                <h3>
+                    Dados em tempo real
+                </h3>
+                <p>
+                    As informações climáticas podem ser analisadas rapidamente para auxiliar as decisões preventivas e as ações emergenciais.
+                </p>
+            </div>
+            <div class="card">
+                <h3>
+                    Alertas preventivos
+                </h3>
+                <p>
+                    O OrbitEye pode auxilixar equipes de emerg~encia através da geração de alertas inteligentes para áreas críticas.
+                </p>
+            </div>
+        </div>
     </section>
-    <section id="Objetivos">
-        <h2>Objetivos</h2>
-        <p>
-            Nosso objetivo é auxiliar na prevenção de desastres naturais, através da tecnologia.
-        </p>
+    <section id="dashboard" class="dashboard">
+        <span class="mini-title">
+            DASHBOARD
+        </span>
+        <h2>
+            Painel de monitoramento ambiental
+        </h2>
+        <div class="deshboard-grid">
+            <div class="dashboard-card">
+                <h3>
+                    245+
+                </h3>
+                <p>
+                    Áreas monitoradas
+                </p>
+            </div>
+            <div class="dashboard-card">
+                <h3>
+                    1200+
+                </h3>
+                <p>
+                    Alertas emitidos
+                </p>
+            </div>
+            <div class="dashboard-card">
+                <h3>
+                    24h
+                </h3>
+                <p>
+                    Monitoramento contínuo
+                </p>
+            </div>
+        </div>
     </section>
-    <section id="Beneficios">
-        <h2>Benefícios</h2>
-        <ul>
-            <li>Alertas rápidos</li>
-            <li>Monitoramento em tempo real</li>
-            <li>Prevenção ambiental</li>
-            <li>Auxílio a população</li>
-        </ul>
+    <section id="galeria" class="galeria">
+    <span class="mini-title">
+        GALERIA
+    </span>
+    <h2>
+        Monitoramento ambiental inteligente
+    </h2>
+    <div class="galeria-grid">
+        <div class="galeria-card">
+            <img src="img/imagem.arvore.avif">
+            <div class="galeria-info">
+                <h3>
+                    Tecnologia Espacial
+                </h3>
+                <p>
+                    Monitoramentoinspirado em satélites ambientais.
+                </p>
+            </div>
+        </div>
+        <div class="galeria-card">
+            <img src="img/imagem.bosque.avif">
+            <div class="galeria-info">
+                <h3>
+                    Monitoramento Climático
+                </h3>
+                <p>
+                    Acompanhamento inteligente de áreas ambientais.
+                </p>
+            </div>
+        </div>
+        <div class="galeria-card">
+            <h3>
+                Preservação Ambiental
+            </h3>
+            <p>
+                Uso da tecnologia para proteção ambiental.
+            </p>
+        </div>
+    </div>
     </section>
-    <section class="slideshow">
-        <img src="img/imagem.arvore.avif" class="slide active">
-        <img src="img/imagem.bosque.avif" class="slide">
-        <img src="img/imagem.lago.avif" class="slide">
+    <section id="quiz" class="quiz">
+        <span class="mini-title">
+            QUIZ
+        </span>
+        <h2>
+            Conhecimentos ambientais
+        </h2>
+        <div class="quiz-box">
+            <h3 id="pergunta">
+                qual a tecnologia auxilia no monitoramento ambiental moderno ?
+            </h3>
+            <div class="quiz-buttons">
+                <button onclick="resposta(this, true)">
+                    Satélites
+                </button>
+                <button onclick="resposta(this, false)">
+                    Televisores
+                </button>
+                <button onclick="resposta(this, false)">
+                    Impressoras
+                </button>
+                <button onclick="resposta(this, false)">
+                    Rádios antigos
+                </button>
+            </div>
+            <p id="resultadoQuiz"></p>
+        </div>
     </section>
-    <section id="Quiz">
-        <h2>Quiz ambiental</h2>
-        <p>Qual tecnologia ajuda no monitoramento ambiental ?</p>
-        <button onclick="respostaCorreta()">satélites</button>
-        <button onclick="respostaErrada()">Carros</button>
-    </section>
-    <section id="Contato">
-        <h2>Contato</h2>
-        <form id="formulario">
-            <input type="text" id="nome" placeholder="Digite o seu nome: ">
-            <input type="email" id="email" placeholder="Digite o seu email: ">
-            <button type="submit">Enviar</button>
+    <section id="contato" class="contato">
+        <span class="mini-title">
+            CONTATO
+        </span>
+        <h2>
+            Fale com o OrbitEye
+        </h2>
+        <form>
+            <input type="text" placeholder="Digite o seu nome">
+            <input type="text" placeholder="Digite o seu e-mail">
+            <textarea placeholder="Digite sua mensagem"></textarea>
+            <button>
+                Enviar mensagem
+            </button>
         </form>
     </section>
+    <footer>
+        <p>
+            2026 OrbitEye • Global Solution FIAP
+        </p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>

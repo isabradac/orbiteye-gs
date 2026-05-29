@@ -1,11 +1,11 @@
-const from = document.getElementById("formulario")
+const from = document.getElementById("formulario");
 from.addEventListener("submit", function(event)
 {
     event.preventDefault();
     const nome = document.getElementById("nome").value;
     const email = document.getElementById("email").value;
 
-    if(nome === ""|| email === "");
+    if(nome === ""|| email === "")
     {
         alert("Preencha todos os campos: ")
     }
@@ -14,22 +14,34 @@ from.addEventListener("submit", function(event)
         alert("Mensagem foi enviada com sucesso!!")
     }
 });
-function respostaCorreta()
-{
-    alert("Resposta correta!!")
-} 
-function respostaErrada()
-{
-    alert("Resposta errada")
-}
-let slideIndex = 0;
-const slide = document.querySelectorAll("slide");
-setInterval(() => {
-    slides[slideIndex].classList.remove("active");
-    slideIndex++;
-    if(slideIndex >= slide.length);
-    {
-        slideIndex = 0;
+function resposta(botao, correto){
+
+    const resultado = document.getElementById("resultadoQuiz");
+
+    const botoes = document.querySelectorAll(".quiz-buttons button");
+
+    botoes.forEach((btn) => {
+
+        btn.disabled = true;
+
+    });
+
+    if(correto){
+
+        botao.style.background = "#22c55e";
+
+        resultado.innerHTML = "Resposta correta!";
+
+        resultado.style.color = "#22c55e";
+
+    } else {
+
+        botao.style.background = "#ef4444";
+
+        resultado.innerHTML = "Resposta incorreta!";
+
+        resultado.style.color = "#ef4444";
+
     }
-    slide[slideIndex].classList.add("active");
-}, 3000);
+
+}
