@@ -1,39 +1,105 @@
-const from = document.getElementById("formulario");
-from.addEventListener("submit", function(event)
+const form = document.getElementById("formulario");
+if (form)
+{
+    form.addEventListener("submit", function(event)
 {
     event.preventDefault();
     const nome = document.getElementById("nome").value;
     const email = document.getElementById("email").value;
-
-    if(nome ===""|| email === "")
+    if(nome === "" || email === "" )
     {
-        alert("Preencha todos os campos: ")
+        alert("Preencha todos os campos.");
     }
     else
     {
-        alert("Mensagem foi enviada com sucesso!")
+        alert("Mensagem enviada com sucesso.")
     }
-});
-function resposta(botao, correto)
+})
+}
+const perguntas = [
     {
-        const resultado = document.getElementById("resultadoQuiz");
-        const botoes = document.querySelectorAll(".quiz-buttons button");
-            botoes.forEach((btn) => 
-            {
-                btn.disabled = true;
-            });
-        if(correto)
-        {
-            botao.style.background = "#22c55e";
-            resultado.innerHTML = "Resposta correta";
-            resultado.style.color = "#22c55e";
-        } 
-        else 
-        {
-            botao.style.background = "#ef4444";
-            resultado.innerHTML = "Resposta Incorreta"
-            resultado.style.color = "#ef4444";
-        }
-
+        pergunta: "Qual que é a tecnologia utilizada para monitoramento ambiental global ? ",
+        opcoes:["Satélites","Televisores","Impressoras","Rádios"],
+        correta:0
+    },
+    {
+        pergunta: "O principal objetivo do OrbitEye é:",
+        opcoes:["Monitoramento ambiental","Streaming","Jogos","Compras"],
+        correta:0
+    },
+    {
+        pergunta: "O que poode ser detectado por sensores ambientais ?",
+        opcoes:["Queimadas","Músicas","Filmes","Livros"],
+        correta:0
+    },
+    {
+        pergunta: "Tecnologias espaciais auxiliam na: ",
+        opcoes:["Coleta de dados","Venda de roupas","Jogos","Delivery"],
+        correta:0
+    },
+    {
+        pergunta: "O monitoramento contínuo ajuda na: ",
+        opcoes:["Prevenção","Desinformação","Propagranda","Publicidade"],
+        correta:0
+    },
+    {
+        pergunta: "Os alertas inteligentes servem para: ",
+        opcoes:["Antecipar riscos","Trocar músicas","Fazer chamadas","Enviar memes"],
+        correta:0
+    },
+    {
+        pergunta: "Qual recurso apresenta informações visuais ?",
+        opcoes:["Dashboard","Controle remoto","TV","Calculadora"],
+        correta:0
+    },
+    {
+        pergunta: "O OrbitEye busca promover: ",
+        opcoes:["Sustentabilidade","Poluição","Desmatamento","Desperdício"],
+        correta:0
+    },
+    {
+        pergunta: "Ouso de dados ambientais ajuda na: ",
+        opcoes:["Tomada de decisão","Produção musical","Cinema","Publicidade"],
+        correta:0
+    },
+];
+let perguntaAtual = 0;
+let pontuacao = 0;
+const pergunta = document.getElementById("pergunta");
+const btn1 = document.getElementById("btn1");
+const btn2 = document.getElementById("btn2");
+const btn3 = document.getElementById("btn3");
+const btn4 = document.getElementById("btn4");
+const resultado = document.getElementById("resultadoQuiz");
+function carregarPergunta()
+{
+    pergunta.innerHTML = perguntas[perguntaAtual].pergunta;
+    btn1.innerHTML = perguntas[perguntaAtual].opcoes[0];
+    btn2.innerHTML = perguntas[perguntaAtual].opcoes[1];
+    btn3.innerHTML = perguntas[perguntaAtual].opcoes[2];
+    btn4.innerHTML = perguntas[perguntaAtual].opcoes[3];
+}
+function responder(indice)
+{
+    if(indice === perguntas[perguntaAtual].correta)
+    {
+        pontuacao++;
     }
+    perguntaAtual++;
+    if(perguntaAtual < perguntas.length)
+    {
+        carregarPergunta();
+    }
+    else
+    {
+        pergunta.innerHTML = "Quiz finalizado";
+        document.querySelector(".quiz-buttons").computedStyleMap.display = "none";
+        resultado.innerHTML = 'Você acertou ${pontuacao} de ${perguntas.length} perguntas.';
+    }
+}
+btn1.onclick = () => responder(0);
+btn2.onclick = () => responder(1);
+btn3.onclick = () => responder(2);
+btn4.onclick = () => responder(3);
+carregarPergunta();const
 
