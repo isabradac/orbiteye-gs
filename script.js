@@ -62,6 +62,11 @@ const perguntas = [
         opcoes:["Tomada de decisão","Produção musical","Cinema","Publicidade"],
         correta:0
     },
+    {
+        pergunta: "Qual é a principal vantagem do monitoramento em tempo real?",
+        opcoes:["Resposta rápida","Mais poluição","Menos dados","Maior risco"],
+        correta:0
+    },
 ];
 let perguntaAtual = 0;
 let pontuacao = 0;
@@ -93,13 +98,29 @@ function responder(indice)
     else
     {
         pergunta.innerHTML = "Quiz finalizado";
-        document.querySelector(".quiz-buttons").computedStyleMap.display = "none";
-        resultado.innerHTML = 'Você acertou ${pontuacao} de ${perguntas.length} perguntas.';
+        document.querySelector(".quiz-buttons").style.display = "none";
+        resultado.innerHTML = `Você acertou ${pontuacao} de ${perguntas.length} perguntas.`;
     }
 }
 btn1.onclick = () => responder(0);
 btn2.onclick = () => responder(1);
 btn3.onclick = () => responder(2);
 btn4.onclick = () => responder(3);
-carregarPergunta();const
+carregarPergunta();
+
+function temaEscuro()
+{
+    document.body.style.background = "#050816";
+    document.body.style.color = "white";
+}
+function temaAzul()
+{
+    document.body.style.background = "#0f172a";
+    document.body.style.color = "white";
+}
+function temaVerde()
+{
+    document.body.style.background = "#052e16";
+    document.body.style.color = "white";
+}
 
