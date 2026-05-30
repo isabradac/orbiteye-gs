@@ -323,10 +323,36 @@ footer
     {
         width: 100%;
     }
-    #resultadoQuiz
+#resultadoQuiz
     {
         margin-top: 25px;
         font-size: 20px;
         font-weight: 600;
     }
+.voltar-topo
+{
+    display:block;
+    margin-top:15px;
+    color:#38bdf8;
+    text-decoration:none;
+}
+.slideshow{
+    display:flex;
+    justify-content:center;
+}
+.slideshow img
+{
+    width:80%;
+    max-width:900px;
+    height:500px;
+    object-fit:cover;
+    border-radius:25px;
+}
+.temas button{
+    margin:5px;
+    padding:8px 12px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
 }

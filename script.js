@@ -2,8 +2,8 @@ const from = document.getElementById("formulario");
 from.addEventListener("submit", function(event)
 {
     event.preventDefault();
-    const nome = document.getElementById("nome").ariaValueMax;
-    const email = document.getElementById("email").ariaValueMax;
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
 
     if(nome ===""|| email === "")
     {
@@ -24,13 +24,13 @@ function resposta(botao, correto)
             });
         if(correto)
         {
-            botao.style.backgroud = "#22c55e";
+            botao.style.background = "#22c55e";
             resultado.innerHTML = "Resposta correta";
             resultado.style.color = "#22c55e";
         } 
         else 
         {
-            botao.style.backgroud = "#ef4444";
+            botao.style.background = "#ef4444";
             resultado.innerHTML = "Resposta Incorreta"
             resultado.style.color = "#ef4444";
         }
