@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -14,15 +15,25 @@
         <div class="logo">
             OrbitEye
         </div>
-        <div class="temas">
-        <button onclick="temaEscuro()">🌙</button>
-        <button onclick="temaAzul()">🔵</button>
-        <button onclick="temaVerde()">🟢</button>
+        <div class="temas" aria-label="Escolha de tema">
+        <button type="button" onclick="alterarTema('escuro')" aria-label="Tema escuro">🌙</button>
+        <button type="button" onclick="alterarTema('azul')" aria-label="Tema azul">🔵</button>
+        <button type="button" onclick="alterarTema('verde')" aria-label="Tema verde">🟢</button>
         </div>
-        <nav>
+
+        <button class="menu-btn" type="button" onclick="abrirMenu()">⋮</button>
+        <nav id="menu">
             <a href="#sobre">Sobre</a>
             <a href="#tecnologia">Tecnologia</a>
             <a href="#dashboard">Dashboard</a>
+            <a href="#problema">Problema</a>
+            <a href="#objetivos">Objetivos</a>
+            <a href="#publico">Publico-alvo</a>
+            <a href="#beneficios">Beneficios</a>
+            <a href="#aplicacao">Aplicação</a>
+            <a href="#impacto">Impacto</a>
+            <a href="#ods">ODS</a>
+            <a href="#futuro">Futuro</a>
             <a href="#galeria">Galeria</a>
             <a href="#quiz">Quiz</a>
             <a href="#contato">Contato</a>
@@ -67,7 +78,7 @@
             </p>
         </div>
         <div class="sobre-imagem">
-            <img src="img/espaço.avif">
+            <img src="img/espaço.avif" alt="Imagem do espaço representando a tecnologia orbital">
         </div>
     </section>
     <section id="tecnologia" class="tecnologia">
@@ -146,6 +157,129 @@
             </div>
         </div>
     </section>
+    <section id="problema" class="problema">
+        <span class="mini-title">
+            O PROBLEMA 
+        </span>
+        <h2>
+            Desafios ambientais da atualidade
+        </h2>
+        <p>
+            O aumento da queimadas, enchentes, secas prolongadas e evventos climáticos extremos, representa um grande desafio para governos, empresas e comunidades. Muitas vezes, a  identificação desses problemas ocorre tarde demais, aumentando prejuízos ambientais e sociais.
+        </p>
+    </section>
+    <section id="objetivos" class="objetivos">
+        <span class="mini-title">
+            OBJETIVOS
+        </span>
+        <h2>
+            O que o OrbitEye busca alcançar 
+        </h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Monitorar</h3>
+                <p>Coletar informações ambientais de forma contínua.</p>
+            </div>
+            <div class="card">
+                <h3>Prevenir</h3>
+                <p>Antecipar riscos ambientais por meio de alertas.</p>
+            </div>
+            <div class="card">
+                <h3>Conscientizar</h3>
+                <p>Promover educação ambiental através dos dados.</p>
+            </div>
+        </div>
+    </section>
+    <section id="publico" class="publico">
+        <span class="mini-title">
+            PUBLICO-ALVO
+        </span>
+        <h2>
+            Quem sera impactado pelo OrbitEye ?
+        </h2>
+        <p>
+            O OrbitEye pode ajudar a Defesa Civil, prefeituras, agricultores, ONGs ambientais e comunidades em areas de risco. 
+        </p>
+        <p>
+            Esses grupos precisam de informações rápidas para agir contra queimadas, enchentes e outros eventos climáticos. 
+        </p>
+    </section>
+    <section id="beneficios" class="beneficios">
+        <span class="mini-title">
+            BENEFÍCIOS
+        </span>
+        <h2>
+            Vantagens da plataforma
+        </h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Monitoramento 24h</h3>
+                <p>Acompanhamento constante das áreas monitoradas.</p>
+            </div>
+            <div class="card">
+                <h3>Sustentabilidade</h3>
+                <p>Contribuição para a preservação ambiental.</p>
+            </div>
+        </div>
+    </section>
+    <section id="aplicacao" class="aplicacao">
+        <span class="mini-title">
+            APLICAÇÂO NO DIA A DIA
+        </span>
+        <h2>
+            Como a solução ajuda na prática ?
+        </h2>
+        <p>
+            O úsuario pode accesar o painel, vizualizar áreas monitoradas e acompanhar alertas ambientais em tempo real. 
+        </p>
+        <p>
+            Com essas informações, equipes podem planejar ações preventivas e reduzir danos ambientais e sociais.
+        </p>
+    </section>
+    <section id="impacto" class="impacto">
+        <span class="mini-title">
+            IMPACTO SOCIAL
+        </span>
+        <h2>
+            Como o OrbitEye pode ajudar a sociedade.
+        </h2>
+        <p>
+            Ao disponibilizar informações ambientais em tempo real, o OrbitEye contrinui para ações preventivas, redução de riscos e maior conscientização sobre a importância da preservação dos recursos naturais.
+        </p>
+    </section>
+    <section id="ods" class="ods">
+        <span class="mini-title">
+            ODS DA ONU
+        </span>
+        <h2>
+            Onjetivos de Desenvolvimento Sustentavel
+        </h2>
+        <div class="cards">
+            <div class="card">
+                <h3>ODS 13</h3>
+                <p>Ação contra a mudança global do clima.</p>
+            </div>
+            <div class="card">
+                <h3>ODS 15</h3>
+                <p>Proteção da vida terrestre e dos ecossistemas.</p>
+            </div>
+            <div class="card">
+                <h3>ODS 11</h3>
+                <p>Cidades mais sustentáveis e resilientes.</p>
+            </div>
+        </div>
+    </section>
+    <section id="futuro" class="futuro">
+        <span class="mini-title">
+            VISÃO DE FUTURO
+        </span>
+        <h2>
+            Próximos passos do projeto
+        </h2>
+        <p>
+            Futuramente, o OrbitEye poderá integrar inteligência artificial, sensores IOT e sistemas avançados de análise preditiva para aumentar ainda mais a precisão do monitoramento ambiental.
+        </p>
+    </section>
     <section id="slideshow">
     <span class="mini-title">
         MONITORAMENTO VISUAL
@@ -155,7 +289,7 @@
     </h2>
     <div class="slideshow">
 
-        <img id="slideImagem" src="img/imagem.arvore.avif">
+        <img id="slideImagem" src="img/imagem.arvore.avif" alt="Floresta monitorada pelo OrbitEye">
     </div>
     </section>
     <section id="galeria" class="galeria">
@@ -167,7 +301,7 @@
     </h2>
     <div class="galeria-grid">
         <div class="galeria-card">
-            <img src="img/imagem.arvore.avif">
+            <img src="img/imagem.arvore.avif" alt="Área verde monitorada">
             <div class="galeria-info">
                 <h3>
                     Tecnologia Espacial
@@ -178,7 +312,7 @@
             </div>
         </div>
         <div class="galeria-card">
-            <img src="img/imagem.bosque.avif">
+            <img src="img/imagem.bosque.avif" alt="Bosque preservado">
             <div class="galeria-info">
                 <h3>
                     Monitoramento Climático
@@ -189,7 +323,7 @@
             </div>
         </div>
         <div class="galeria-card">
-            <img src="img/imagem.lago.avif">
+            <img src="img/imagem.lago.avif" alt="Lago cercado por vegetação">
             <div class="galeria-info">
             <h3>
                 Preservação Ambiental
@@ -229,7 +363,7 @@
         <form id="formulario">
         <input id="nome" type="text" placeholder="Digite o seu nome">
         <input id="email" type="email" placeholder="Digite o seu e-mail">
-            <textarea placeholder="Digite sua mensagem"></textarea>
+            <textarea id="mensagem" placeholder="Digit sua mensagem"></textarea>
             <button>
                 Enviar mensagem
             </button>
@@ -241,6 +375,9 @@
         </p>
         <p>
             Projeto acadêmico desenvolvido para a conscientização e o monitoramento ambiental.
+        </p>
+        <p>
+            Integrantes: Isadora Bradac RM - 569585 Kaua Miranda RM - 569473 Murilo Araujo RM - 573517
         </p>
         <a href="#" class="voltar-topo">
             Voltar ao topo.
